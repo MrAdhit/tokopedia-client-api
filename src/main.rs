@@ -192,8 +192,12 @@ async fn service(req: Request<Incoming>) -> Result<Response<Full<Bytes>>> {
 
                     let response = HTTP_CLIENT
                         .post("https://gql.tokopedia.com/graphql/PDPGetLayoutQuery")
+                        .header("Accept", "*/*")
+                        .header("Accept-Encoding", "gzip, deflate, br")
+                        .header("Connection", "keep-alive")
                         .header("Content-Type", "application/json")
-                        .header("User-Agent", "PostmanRuntime/7.32.3")
+                        .header("Referer", "https://www.tokopedia.com/alifmodernwear/alf-by-alif-mukena-mini-two-tone-travel-gardenia?source=homepage.left_carousel.0.275921")
+                        .header("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36")
                         .body(body.to_string())
                         .send()
                         .await?
@@ -277,8 +281,12 @@ async fn service(req: Request<Incoming>) -> Result<Response<Full<Bytes>>> {
                     let response = HTTP_CLIENT
                         .post("https://gql.tokopedia.com/graphql/PDPGetLayoutQuery")
                         .header("X-Tkpd-Akamai", "pdpGetLayout")
+                        .header("Accept", "*/*")
+                        .header("Accept-Encoding", "gzip, deflate, br")
+                        .header("Connection", "keep-alive")
                         .header("Content-Type", "application/json")
-                        .header("User-Agent", "PostmanRuntime/7.32.3")
+                        .header("Referer", "https://www.tokopedia.com/alifmodernwear/alf-by-alif-mukena-mini-two-tone-travel-gardenia?source=homepage.left_carousel.0.275921")
+                        .header("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36")
                         .body(body.to_string())
                         .send()
                         .await?
