@@ -1104,7 +1104,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "tokopedia-bot-client"
+name = "tokopedia-client-api"
 version = "0.1.0"
 dependencies = [
  "anyhow",
